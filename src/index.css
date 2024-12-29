@@ -1,0 +1,44 @@
+.to-do-list {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+button {
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5 ease;
+}
+
+.add-button {
+    background-color: darkseagreen;
+}
+
+.add-button:hover {
+    background-color: forestgreen;
+}
+
+.delete-button {
+    background-color: indianred;
+}
+
+.delete-button:hover {
+    background-color: firebrick;
+}
+
+.move-button {
+    background-color: indianred;
+}
+
+.move-button:hover {
+    background-color: indianred;
+}
