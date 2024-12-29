@@ -1,11 +1,16 @@
+body {
+    background-color: darkslategray;
+}
+
 .to-do-list {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     margin-top: 100px;
 }
 
 h1 {
     font-size: 4rem;
+    color: azure;
 }
 
 button {
@@ -65,4 +70,18 @@ li {
     border-radius: 5px;
     display: flex;
     align-items: center;
+}
+
+.text {
+    flex: 1;
+    /* flex-shrink: 1;
+    flex-basis: 0%; */
+}
+
+.delete-button,
+.move-button {
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    margin-left: 10px;
+
 }

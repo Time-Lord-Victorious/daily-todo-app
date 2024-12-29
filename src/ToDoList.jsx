@@ -4,7 +4,7 @@ function ToDoList() {
 
 
 
-    const [tasks, setTasks] = useState(["Finish up plans on Noa tetralogy", "Complete todo app", "Prep for New Year's Day"]);
+    const [tasks, setTasks] = useState(["Finish up plans on Noa tetralogy ", "Complete todo app ", "Prep for New Year's Day "]);
 
     const [newTask, setNewTask] = useState("");
 
@@ -12,9 +12,14 @@ function ToDoList() {
         setNewTask(event.target.value);
     }
     function addTask() {
-
+        if (newTask.trim() !== "") {
+            setTasks(t => [...t, newTask]);
+            setNewTask("");
+        }
     }
     function deleteTask(index) {
+        const updatedTasks = tasks.filter((_, i) => i !== index);
+        setTasks(updatedTasks)
 
     }
     function moveTaskUp(index) {
@@ -29,6 +34,7 @@ function ToDoList() {
     return (
         <div className="to-do-list">
             <h1>Daily Todo List</h1>
+            < br />
             <div>
                 <input
                     type="text"
@@ -41,7 +47,8 @@ function ToDoList() {
                     Add task!
                 </button>
             </div>
-
+            <br />
+            <br />
             <ol>
                 {tasks.map((task, index) =>
 
