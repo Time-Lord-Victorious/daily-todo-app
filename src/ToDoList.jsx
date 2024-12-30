@@ -4,7 +4,7 @@ function ToDoList() {
 
 
 
-    const [tasks, setTasks] = useState(["Finish up plans on Noa tetralogy ", "Complete todo app ", "Prep for New Year's Day "]);
+    const [tasks, setTasks] = useState([]);
 
     const [newTask, setNewTask] = useState("");
 
@@ -23,10 +23,19 @@ function ToDoList() {
 
     }
     function moveTaskUp(index) {
-
+        if (index > 0) {
+            const updatedTasks = [...tasks];
+            [updatedTasks[index], updatedTasks[index - 1]] = [updatedTasks[index - 1], updatedTasks[index]];
+            setTasks(updatedTasks)
+        }
     }
     function moveTaskDown(index) {
 
+        if (index < tasks.length - 1) {
+            const updatedTasks = [...tasks];
+            [updatedTasks[index], updatedTasks[index + 1]] = [updatedTasks[index + 1], updatedTasks[index]];
+            setTasks(updatedTasks)
+        }
     }
 
 
