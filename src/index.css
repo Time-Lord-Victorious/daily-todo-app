@@ -41,11 +41,11 @@ button {
 }
 
 .move-button {
-    background-color: dodgerblue
+    background-color: dodgerblue;
 }
 
 .move-button:hover {
-    background-color: cadetblue;
+    background-color: cornflowerblue;
 }
 
 input[type="text"] {
